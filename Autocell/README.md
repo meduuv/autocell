@@ -68,7 +68,7 @@ npm run setup
 npm run dev
 ~~~
 
-Open **http://localhost:3000** and keep the terminal running. The frontend runs on port 3000 and proxies API requests to the backend on port 7777.
+The app's default production URL is **http://localhost:7777**. For the normal app experience, use the Windows `start.bat` launcher or follow the production build instructions below. When you specifically run `npm run dev`, Vite serves a separate development frontend on port 3000 and proxies API requests to the backend on port 7777.
 
 ### One-click Windows launcher
 
