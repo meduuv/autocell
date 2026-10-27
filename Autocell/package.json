@@ -1,0 +1,34 @@
+{
+  "name": "autocell",
+  "version": "2.0.0",
+  "description": "Autocell - AI-powered Spreadsheet Quality & Cleanup Agent by MEDU",
+  "author": "MEDU",
+  "main": "server/index.ts",
+  "scripts": {
+    "setup": "npm install && npm --prefix client install",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "ts-node-dev --respawn server/index.ts",
+    "client:dev": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "build:server": "tsc",
+    "build": "npm --prefix client run build && tsc",
+    "start": "node dist/server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "xlsx": "^0.18.5",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.12.7",
+    "concurrently": "^8.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
